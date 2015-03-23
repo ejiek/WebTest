@@ -6,7 +6,10 @@
 	</head>
 	<body>
 		<?php
-		echo("<p>Hello, UNIX!<p>");
+		define(ITS_A_CONSTANT, "<p>Hello, UNIX!<p>");
+		if(defined("ITS_A_CONSTANT")){
+			echo(ITS_A_CONSTANT);
+		}
 		?>
 	</body>
 </html>

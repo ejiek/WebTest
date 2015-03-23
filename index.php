@@ -1,3 +1,9 @@
+<?php
+
+	session_destroy();
+
+	?>
+
 <html>
 	<head>
   		<title>List</title>
@@ -10,6 +16,10 @@
 			<li><form method="post" action="examp/post_handler.php">
 			<input type="text" name="username">
 			<input type="submit" value="$_POST"></li>
+			<li><form method="post" action="examp/session_login.php">	
+				<p><input type="text" name="username" placeholder="Username" ></p>
+				<input type="text" name="password" placeholder="Password" formaction="examp/session_login.php">
+				<input type="submit" formaction="examp/session_login.php" value="Open Session"></li>
 		</ul>
 	</body>
 </html>

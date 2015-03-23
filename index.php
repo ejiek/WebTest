@@ -1,15 +1,10 @@
 <html>
 	<head>
-		<title>
-			Test page №1
-		</title>
+  		<title>List</title>
 	</head>
 	<body>
-		<?php
-		define(ITS_A_CONSTANT, "<p>Hello, UNIX!<p>");
-		if(defined("ITS_A_CONSTANT")){
-			echo(ITS_A_CONSTANT);
-		}
-		?>
+		<ul>
+			<li><a href="examp/constant.php">Constant and defined</a></li>
+		</ul>
 	</body>
 </html>

@@ -25,6 +25,8 @@
 				<p><input type="text" name="username" placeholder="Username"></p>
 				<input type="text" name="password" placeholder="Password">
 				<input type="submit" value="Open Session"></form></li>
+
+			<li><a href="examp/cookie.php">Cookie</a></li>
 		</ul>
 	</body>
 </html>

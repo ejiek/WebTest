@@ -5,6 +5,11 @@
 <html>
 	<head>
   		<title>List</title>
+		 <style type="text/css">
+		   .bord {
+		    border: solid 1px black; 
+		    }
+		 </style>
 	</head>
 	<body>
 		<ul>
@@ -16,7 +21,7 @@
 			<input type="text" name="username" form="post_form">
 			<input type="submit" value="$_POST" form="post_form"></form></li>
 			
-			<li><form method="post" action="examp/session_login.php">	
+			<li><form class="bord" method="post" action="examp/session_login.php">	
 				<p><input type="text" name="username" placeholder="Username"></p>
 				<input type="text" name="password" placeholder="Password">
 				<input type="submit" value="Open Session"></form></li>

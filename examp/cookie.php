@@ -22,7 +22,7 @@
 	echo $_COOKIE ["Test"];    
 
 	?>
-
+	<p>Update page to see the cookie, or lack of it(after deleting)
 	<input type="button" onclick="delete_cookie('Test');" value="Delete cookie">
 
 	</body>

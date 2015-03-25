@@ -8,6 +8,8 @@
 	  header("Location: ../index.php");
 	}
 
+session_destroy();
+
 	?>
 
 <html>
@@ -17,7 +19,12 @@
 
 	<body>
 	<h1>This file is tripleProtected</h1>
+	<?php
+		echo('session == ');
+		echo($_SESSION["Login"]);
+	?>
 	<p>U c it == U r lgd in</p>
+	<p><a href="session_delete.php">Delete session</a></p>
 	<a href="../index.php">Go home</a>
 	</body>
 </html>

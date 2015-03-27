@@ -24,6 +24,7 @@
 
 			<li><a href="examp/cookie.php">Cookie</a></li>
 			<li><a href="examp/file_manager.php">MidnightSlave</a></li>
+			<li><a href="examp/readfile_makelinks.php">Read file and Make links</a></li>
 		</ul>
 	</body>
 </html>

@@ -1,7 +1,3 @@
-<?php
-	session_destroy();
-?>
-
 <html>
 	<head>
   		<title>List</title>
@@ -27,6 +23,7 @@
 				<input type="submit" value="Open Session"></form></li>
 
 			<li><a href="examp/cookie.php">Cookie</a></li>
+			<li><a href="examp/file_manager.php">MidnightSlave</a></li>
 		</ul>
 	</body>
 </html>

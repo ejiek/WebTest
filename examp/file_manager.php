@@ -15,16 +15,23 @@
 		}
 
 		.file_size {
- 		/*text-align:center;           
-  		float: center;*/
+		width: 100px;
   		display: inline-block;
-  		float: right;
+  		text-align: left;
+  		float: left;
+  		margin-right: 10px;
 		}
 
 		.file_edited {
 		display: inline-block;         
+  		float: right; 
+  		/*margin-right: 0%;*/
+		}
+
+
+		.file_right {
+		display: inline-block;         
   		float: right;
- 		text-align:left;  
   		/*margin-right: 0%;*/
 		}
 	</style>
@@ -40,8 +47,8 @@
 	// Цикл по всем файлам папки
 	while (($entry = readdir($folder)) != "") {
 	   echo "<div class='one_file'><div class='file_name'><a class='files_name' href='" . $entry . "'>" . $entry . "</a></div>";
-	   echo "<div class='file_size'><span> Size: " . filesize("$entry") . " B </span> </div>";
-	   echo "<div class='file_edited'> <span> edited: " . FormatTime(date(filemtime("$entry"))) . "</span> </div></div><hr>";
+	   echo "<div class='file_right'><div class='file_size'><span> Size: " . filesize("$entry") . " B </span> </div>";
+	   echo "<div class='file_edited'> <span> edited: " . FormatTime(date(filemtime("$entry"))) . "</span> </div></div></div><hr>";
 	}
 
 	// Закрыть папку

@@ -8,6 +8,7 @@
 		 </style>
 	</head>
 	<body>
+		<h1>PHP</h1>
 		<ul>
 			<li><a href="php/constant.php">Constant or defined</a></li>
 			<li><a href="php/func.php">Function</a></li>
@@ -29,6 +30,11 @@
 			<li><form id="textw_form" method="post" action="php/file_write.php">
 			<input type="text" name="textblock" form="textw_form">
 			<input type="submit" value="write to file" form="textw_form"></form></li>
+		</ul>
+		<hr>
+		<h1>MySQL</h1>
+		<ul>
+			<li><a href="MySQL/list.php">List and links</a></li>
 		</ul>
 	</body>
 </html>

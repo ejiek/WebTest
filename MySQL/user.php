@@ -5,8 +5,6 @@
 
 	<body>
 
-	<dl>
-
 	<?php
 	// Соединиться с сервером БД
 	mysql_connect("localhost", "web_test", "webpass") or die (mysql_error ());
@@ -22,17 +20,20 @@
 	while($row = mysql_fetch_array($rs)) {
 
 		// Записать данные человека
-		echo "<dt>id:</dt><dd>" . $row["id"] . "</dd>";
-		echo "<dt>Name:</dt><dd>" . $row["Name"] . "</dd>";
-		echo "<dt>Birthdate:</dt><dd>" . $row["Birth"] . "</dd>";
+		echo "<span>id:</span><span>" . $row["id"] . "</span></br>";
+		echo "<span>Name:</span><span>" . $row["Name"] . "</span></br>";
+		echo "<span>Birthdate:</span><span>" . $row["Birth"] . "</span></br>\r\n";
 
 	}
+
+	echo "<form action='delete.php' method='post'>\r\n";
+	echo '<input type="hidden" name="id" value="' . $_GET["id"] . '" />';
+	echo "\r\n<input type='submit' value='Delete this User' />\r\n</form>";
 
 	// Закрыть соединение с БД
 	mysql_close();
 	?>
 
-	</dl>
 	<p><a href="list.php">Return to the list</a></p>
 
 	</body>

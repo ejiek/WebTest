@@ -6,9 +6,6 @@
 
 	<body>
 	<?php
-
-	echo "'" . $_POST["Name"] . "', ";
-	echo "'" . $_POST["Birth"] . "'')";
 	// Соединение с сервером БД
 	mysql_connect("localhost", "web_test", "webpass") or die (mysql_error ());
 

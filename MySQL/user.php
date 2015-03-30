@@ -15,16 +15,18 @@
 	// Получить данные из БД, в зависимости от значения id в URL
 	$strSQL = "SELECT * FROM web_users WHERE id=" . $_GET["id"];
 	$rs = mysql_query($strSQL);
-	
+	echo "<form action='edit.php' method='post'>\r\n";
 	// Цикл по $rs
 	while($row = mysql_fetch_array($rs)) {
 
 		// Записать данные человека
 		echo "<span>id:</span><span>" . $row["id"] . "</span></br>";
-		echo "<span>Name:</span><span>" . $row["Name"] . "</span></br>";
-		echo "<span>Birthdate:</span><span>" . $row["Birth"] . "</span></br>\r\n";
+		echo "<span>Name:</span><input type='text' name='Name' value=" . $row["Name"] . " /></br>";
+		echo "<span>Birthdate:</span><input type='text' name='Birth' value=" . $row["Birth"] . " /></br>\r\n";
 
 	}
+	echo '<input type="hidden" name="id" value="' . $_GET["id"] . '" />';
+	echo "\r\n<input type='submit' value='edit' />\r\n</form>";
 
 	echo "<form action='delete.php' method='post'>\r\n";
 	echo '<input type="hidden" name="id" value="' . $_GET["id"] . '" />';

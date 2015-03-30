@@ -1,38 +1,33 @@
 
 <html>
 	<head>
-	<title>BD insert</title>
+	<title>Обновление данных в БД</title>
 	</head>
 
 	<body>
+
 	<?php
 	// Соединение с сервером БД
 	mysql_connect("localhost", "web_test", "webpass") or die (mysql_error ());
 
 	// Выбор БД
 	mysql_select_db("web_test") or die(mysql_error());
-
 	
 	// Построение SQL-оператора
+	$strSQL = "Update web_users set "; 
+	$strSQL = $strSQL . "Name= '" . $_POST["Name"] . "', "; 
+	$strSQL = $strSQL . "Birth= '" . $_POST["Birth"] . "' "; 
 
-	$strSQL = "INSERT INTO web_users(";
-
-	$strSQL = $strSQL . "Name, ";
-	$strSQL = $strSQL . "Birth) ";
-
-	$strSQL = $strSQL . "VALUES(";
-
-	$strSQL = $strSQL . "'" . $_POST["Name"] . "', ";
-	$strSQL = $strSQL . "'" . $_POST["Birth"] . "')";
+	$strSQL = $strSQL . "Where id = " . $_POST["id"]; 
 
 	// SQL-оператор выполняется
-	mysql_query($strSQL) or die (mysql_error());
+	mysql_query($strSQL);
 
-	// Закрытие соединения
+	// Закрыть соединение с БД
 	mysql_close();
 	?>
 
-	<h1>User has been created!</h1>
+	<h1>BD Updated!</h1>
 	<p><a href="list.php">Return to the list</a></p>
 	</body>
 </html>
